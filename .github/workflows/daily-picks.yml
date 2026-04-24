@@ -39,3 +39,4 @@ jobs:
           else
             python python/discord_alert.py
           fi
+
