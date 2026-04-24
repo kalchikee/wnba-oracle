@@ -1,0 +1,41 @@
+name: WNBA Daily Picks
+
+on:
+  schedule:
+    # 11:00 UTC daily = 7:00 AM ET (EDT). WNBA games usually 7 PM ET.
+    # Python script gracefully skips on days with no games (off-season).
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to predict (YYYYMMDD). Blank = today.'
+        required: false
+        default: ''
+
+jobs:
+  daily-picks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send Discord predictions
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python python/discord_alert.py --date "${{ github.event.inputs.date }}"
+          else
+            python python/discord_alert.py
+          fi

@@ -1,0 +1,14 @@
+{
+  "version": "4.1.0",
+  "sport": "WNBA",
+  "feature_names": [
+    "elo_diff",
+    "win_pct_diff",
+    "log5_prob",
+    "pythagorean_diff",
+    "is_home"
+  ],
+  "n_samples": 1337,
+  "avg_accuracy": 0.6596592032823045,
+  "avg_brier": 0.22068910660811045
+}
