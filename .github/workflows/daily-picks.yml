@@ -16,6 +16,8 @@ jobs:
   daily-picks:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write   # needed to commit predictions/<date>.json
 
     steps:
       - name: Checkout repo
@@ -33,10 +35,23 @@ jobs:
       - name: Send Discord predictions
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          KALSHI_MIN_PROB: '0.58'
         run: |
           if [ -n "${{ github.event.inputs.date }}" ]; then
             python python/discord_alert.py --date "${{ github.event.inputs.date }}"
           else
             python python/discord_alert.py
+          fi
+
+      - name: Commit predictions JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add predictions/*.json || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Emit predictions JSON for kalshi-safety"
+            git push
+          else
+            echo "No predictions file to commit"
           fi
 

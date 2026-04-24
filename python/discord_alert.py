@@ -19,6 +19,7 @@ from predict import (
     load_model, build_elo_from_history, fetch_games, fetch_team_record,
     build_features, predict_proba,
 )
+from predictions_file import write_predictions_file
 import time
 from datetime import timedelta
 
@@ -74,6 +75,13 @@ def main():
     if not results:
         print("No predictable games — skipping Discord alert.")
         return
+
+    # Emit predictions JSON for kalshi-safety to consume.
+    try:
+        out_path = write_predictions_file(date_str, results)
+        print(f"[kalshi] Wrote predictions file: {out_path}")
+    except Exception as e:
+        print(f"[kalshi] Failed to write predictions file: {e}")
 
     # Build embed
     results.sort(key=lambda x: -max(x["home_prob"], x["away_prob"]))
