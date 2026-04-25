@@ -1,0 +1,31 @@
+{
+  "sport": "WNBA",
+  "date": "2026-04-25",
+  "generatedAt": "2026-04-25T11:18:55Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-04-25-CHI-PHX",
+      "home": "PHX",
+      "away": "CHI",
+      "pickedTeam": "PHX",
+      "pickedSide": "home",
+      "modelProb": 0.8065,
+      "extra": {
+        "homeProb": 0.8065,
+        "awayProb": 0.1935
+      }
+    },
+    {
+      "gameId": "wnba-2026-04-25-MIN-WSH",
+      "home": "WSH",
+      "away": "MIN",
+      "pickedTeam": "MIN",
+      "pickedSide": "away",
+      "modelProb": 0.6888,
+      "extra": {
+        "homeProb": 0.3112,
+        "awayProb": 0.6888
+      }
+    }
+  ]
+}
