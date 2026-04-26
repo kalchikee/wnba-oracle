@@ -1,0 +1,19 @@
+{
+  "sport": "WNBA",
+  "date": "2026-04-26",
+  "generatedAt": "2026-04-26T11:18:29Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-04-26-JPN-LV",
+      "home": "LV",
+      "away": "JPN",
+      "pickedTeam": "LV",
+      "pickedSide": "home",
+      "modelProb": 0.6789,
+      "extra": {
+        "homeProb": 0.6789,
+        "awayProb": 0.3211
+      }
+    }
+  ]
+}
