@@ -1,0 +1,19 @@
+{
+  "sport": "WNBA",
+  "date": "2026-04-27",
+  "generatedAt": "2026-04-27T11:37:21Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-04-27-NIGERIA-MIN",
+      "home": "MIN",
+      "away": "NIGERIA",
+      "pickedTeam": "MIN",
+      "pickedSide": "home",
+      "modelProb": 0.6721,
+      "extra": {
+        "homeProb": 0.6721,
+        "awayProb": 0.3279
+      }
+    }
+  ]
+}
