@@ -1,0 +1,19 @@
+{
+  "sport": "WNBA",
+  "date": "2026-04-30",
+  "generatedAt": "2026-04-30T11:34:37Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-04-30-DAL-IND",
+      "home": "IND",
+      "away": "DAL",
+      "pickedTeam": "IND",
+      "pickedSide": "home",
+      "modelProb": 0.8065,
+      "extra": {
+        "homeProb": 0.8065,
+        "awayProb": 0.1935
+      }
+    }
+  ]
+}
