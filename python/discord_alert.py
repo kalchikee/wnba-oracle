@@ -20,6 +20,7 @@ from predict import (
     build_features, predict_proba,
 )
 from predictions_file import write_predictions_file
+from recap import load_history, compute_season_stats
 import time
 from datetime import timedelta
 
@@ -97,6 +98,30 @@ def main():
             f"({pick_prob*100:.1f}%){star}"
         )
 
+    # Season accuracy — pulled from data/grading_history.json (populated by
+    # the nightly recap workflow). Field is hidden until the season has at
+    # least one graded prediction.
+    fields = []
+    try:
+        season = compute_season_stats(load_history())
+        if season["total"] > 0:
+            fields.append({
+                "name": "📊 Season Accuracy",
+                "value": (
+                    f"**{season['accuracy'] * 100:.1f}%** · "
+                    f"{season['correct']}/{season['total']} predictions correct this season"
+                ),
+                "inline": False,
+            })
+    except Exception as e:
+        print(f"[discord] season-stats read failed (non-blocking): {e}")
+
+    fields.append({
+        "name": "📋 All Games",
+        "value": "\n".join(field_lines)[:1000],  # Discord 1024 char limit
+        "inline": False,
+    })
+
     date_display = datetime.strptime(date_str, "%Y%m%d").strftime("%Y-%m-%d")
     embed = {
         "title": f"🏀 WNBA Oracle — {date_display}",
@@ -104,11 +129,7 @@ def main():
             f"**{len(results)} game(s)** · **{hc_count}** high-conviction (65%+)"
         ),
         "color": 0xFF6600,  # WNBA orange
-        "fields": [{
-            "name": "📋 All Games",
-            "value": "\n".join(field_lines)[:1000],  # Discord 1024 char limit
-            "inline": False,
-        }],
+        "fields": fields,
         "footer": {"text": "WNBA Oracle v4.1 | ESPN data + logistic regression"},
         "timestamp": datetime.now().isoformat(),
     }

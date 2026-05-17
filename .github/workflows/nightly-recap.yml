@@ -1,0 +1,47 @@
+name: Nightly Recap (grade yesterday's predictions)
+
+# Walks every ungraded predictions/*.json file and grades each pick
+# against the actual ESPN final score. Updates data/grading_history.json
+# and commits it back so the morning briefing can read the season hit
+# rate. Runs at 09:00 UTC daily (~4 AM CT / 5 AM ET) so it catches
+# West-Coast games that finish past midnight ET.
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write   # needs to commit data/grading_history.json
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Grade ungraded predictions
+        run: python python/recap.py
+
+      - name: Commit graded history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/grading_history.json || true
+          if ! git diff --staged --quiet; then
+            git commit -m "WNBA recap: grade ungraded predictions"
+            git push
+          else
+            echo "No new gradings to commit"
+          fi
