@@ -1,0 +1,19 @@
+{
+  "sport": "WNBA",
+  "date": "2026-05-18",
+  "generatedAt": "2026-05-18T12:12:04Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-05-18-CON-POR",
+      "home": "POR",
+      "away": "CON",
+      "pickedTeam": "POR",
+      "pickedSide": "home",
+      "modelProb": 0.6716,
+      "extra": {
+        "homeProb": 0.6716,
+        "awayProb": 0.3284
+      }
+    }
+  ]
+}
