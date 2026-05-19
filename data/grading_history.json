@@ -403,6 +403,19 @@
       "homeScore": 79,
       "awayScore": 86,
       "gradedAt": "2026-05-18T10:26:04.845250+00:00"
+    },
+    {
+      "date": "2026-05-18",
+      "gameId": "wnba-2026-05-18-CON-POR",
+      "away": "CON",
+      "home": "POR",
+      "pickedTeam": "POR",
+      "modelProb": 0.6716,
+      "actualWinner": "POR",
+      "correct": true,
+      "homeScore": 83,
+      "awayScore": 82,
+      "gradedAt": "2026-05-19T10:15:27.344985+00:00"
     }
   ]
 }
