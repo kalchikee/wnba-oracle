@@ -416,6 +416,19 @@
       "homeScore": 83,
       "awayScore": 82,
       "gradedAt": "2026-05-19T10:15:27.344985+00:00"
+    },
+    {
+      "date": "2026-05-19",
+      "gameId": "wnba-2026-05-19-TOR-PHX",
+      "away": "TOR",
+      "home": "PHX",
+      "pickedTeam": "PHX",
+      "modelProb": 0.6395,
+      "actualWinner": "TOR",
+      "correct": false,
+      "homeScore": 90,
+      "awayScore": 98,
+      "gradedAt": "2026-05-20T10:06:17.544659+00:00"
     }
   ]
 }
