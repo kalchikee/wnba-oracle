@@ -1,0 +1,31 @@
+{
+  "sport": "WNBA",
+  "date": "2026-05-20",
+  "generatedAt": "2026-05-20T11:59:20Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-05-20-POR-IND",
+      "home": "IND",
+      "away": "POR",
+      "pickedTeam": "IND",
+      "pickedSide": "home",
+      "modelProb": 0.6479,
+      "extra": {
+        "homeProb": 0.6479,
+        "awayProb": 0.3521
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-20-CON-SEA",
+      "home": "SEA",
+      "away": "CON",
+      "pickedTeam": "SEA",
+      "pickedSide": "home",
+      "modelProb": 0.6716,
+      "extra": {
+        "homeProb": 0.6716,
+        "awayProb": 0.3284
+      }
+    }
+  ]
+}
