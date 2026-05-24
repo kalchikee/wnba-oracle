@@ -533,6 +533,32 @@
       "homeScore": 77,
       "awayScore": 59,
       "gradedAt": "2026-05-23T09:32:22.514962+00:00"
+    },
+    {
+      "date": "2026-05-23",
+      "gameId": "wnba-2026-05-23-MIN-CHI",
+      "away": "MIN",
+      "home": "CHI",
+      "pickedTeam": "MIN",
+      "modelProb": 0.7196,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 75,
+      "awayScore": 85,
+      "gradedAt": "2026-05-24T09:34:49.835021+00:00"
+    },
+    {
+      "date": "2026-05-23",
+      "gameId": "wnba-2026-05-23-LA-LV",
+      "away": "LA",
+      "home": "LV",
+      "pickedTeam": "LV",
+      "modelProb": 0.7981,
+      "actualWinner": "LA",
+      "correct": false,
+      "homeScore": 95,
+      "awayScore": 101,
+      "gradedAt": "2026-05-24T09:34:49.835038+00:00"
     }
   ]
 }
