@@ -1,0 +1,43 @@
+{
+  "sport": "WNBA",
+  "date": "2026-05-24",
+  "generatedAt": "2026-05-24T11:31:43Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-05-24-PHX-ATL",
+      "home": "ATL",
+      "away": "PHX",
+      "pickedTeam": "ATL",
+      "pickedSide": "home",
+      "modelProb": 0.623,
+      "extra": {
+        "homeProb": 0.623,
+        "awayProb": 0.377
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-24-DAL-NY",
+      "home": "NY",
+      "away": "DAL",
+      "pickedTeam": "NY",
+      "pickedSide": "home",
+      "modelProb": 0.8065,
+      "extra": {
+        "homeProb": 0.8065,
+        "awayProb": 0.1935
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-24-WSH-SEA",
+      "home": "SEA",
+      "away": "WSH",
+      "pickedTeam": "SEA",
+      "pickedSide": "home",
+      "modelProb": 0.6716,
+      "extra": {
+        "homeProb": 0.6716,
+        "awayProb": 0.3284
+      }
+    }
+  ]
+}
