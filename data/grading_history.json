@@ -559,6 +559,45 @@
       "homeScore": 95,
       "awayScore": 101,
       "gradedAt": "2026-05-24T09:34:49.835038+00:00"
+    },
+    {
+      "date": "2026-05-24",
+      "gameId": "wnba-2026-05-24-PHX-ATL",
+      "away": "PHX",
+      "home": "ATL",
+      "pickedTeam": "ATL",
+      "modelProb": 0.623,
+      "actualWinner": "ATL",
+      "correct": true,
+      "homeScore": 82,
+      "awayScore": 80,
+      "gradedAt": "2026-05-25T10:28:53.299892+00:00"
+    },
+    {
+      "date": "2026-05-24",
+      "gameId": "wnba-2026-05-24-DAL-NY",
+      "away": "DAL",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.8065,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 76,
+      "awayScore": 91,
+      "gradedAt": "2026-05-25T10:28:53.299916+00:00"
+    },
+    {
+      "date": "2026-05-24",
+      "gameId": "wnba-2026-05-24-WSH-SEA",
+      "away": "WSH",
+      "home": "SEA",
+      "pickedTeam": "SEA",
+      "modelProb": 0.6716,
+      "actualWinner": "SEA",
+      "correct": true,
+      "homeScore": 97,
+      "awayScore": 85,
+      "gradedAt": "2026-05-25T10:28:53.299921+00:00"
     }
   ]
 }
