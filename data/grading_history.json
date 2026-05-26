@@ -598,6 +598,32 @@
       "homeScore": 97,
       "awayScore": 85,
       "gradedAt": "2026-05-25T10:28:53.299921+00:00"
+    },
+    {
+      "date": "2026-05-25",
+      "gameId": "wnba-2026-05-25-POR-NY",
+      "away": "POR",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.6572,
+      "actualWinner": "POR",
+      "correct": false,
+      "homeScore": 74,
+      "awayScore": 81,
+      "gradedAt": "2026-05-26T10:21:45.996290+00:00"
+    },
+    {
+      "date": "2026-05-25",
+      "gameId": "wnba-2026-05-25-CON-GS",
+      "away": "CON",
+      "home": "GS",
+      "pickedTeam": "GS",
+      "modelProb": 0.6716,
+      "actualWinner": "GS",
+      "correct": true,
+      "homeScore": 97,
+      "awayScore": 70,
+      "gradedAt": "2026-05-26T10:21:45.996314+00:00"
     }
   ]
 }
