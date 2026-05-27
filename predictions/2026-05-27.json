@@ -1,0 +1,67 @@
+{
+  "sport": "WNBA",
+  "date": "2026-05-27",
+  "generatedAt": "2026-05-27T12:06:29Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-05-27-PHX-NY",
+      "home": "NY",
+      "away": "PHX",
+      "pickedTeam": "NY",
+      "pickedSide": "home",
+      "modelProb": 0.6042,
+      "extra": {
+        "homeProb": 0.6042,
+        "awayProb": 0.3958
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-27-TOR-CHI",
+      "home": "CHI",
+      "away": "TOR",
+      "pickedTeam": "TOR",
+      "pickedSide": "away",
+      "modelProb": 0.6544,
+      "extra": {
+        "homeProb": 0.3456,
+        "awayProb": 0.6544
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-27-ATL-MIN",
+      "home": "MIN",
+      "away": "ATL",
+      "pickedTeam": "MIN",
+      "pickedSide": "home",
+      "modelProb": 0.6479,
+      "extra": {
+        "homeProb": 0.6479,
+        "awayProb": 0.3521
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-27-CON-POR",
+      "home": "POR",
+      "away": "CON",
+      "pickedTeam": "POR",
+      "pickedSide": "home",
+      "modelProb": 0.6716,
+      "extra": {
+        "homeProb": 0.6716,
+        "awayProb": 0.3284
+      }
+    },
+    {
+      "gameId": "wnba-2026-05-27-WSH-SEA",
+      "home": "SEA",
+      "away": "WSH",
+      "pickedTeam": "SEA",
+      "pickedSide": "home",
+      "modelProb": 0.6716,
+      "extra": {
+        "homeProb": 0.6716,
+        "awayProb": 0.3284
+      }
+    }
+  ]
+}
