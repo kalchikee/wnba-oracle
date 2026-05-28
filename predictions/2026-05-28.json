@@ -1,0 +1,19 @@
+{
+  "sport": "WNBA",
+  "date": "2026-05-28",
+  "generatedAt": "2026-05-28T12:11:30Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-05-28-LV-DAL",
+      "home": "DAL",
+      "away": "LV",
+      "pickedTeam": "LV",
+      "pickedSide": "away",
+      "modelProb": 0.7196,
+      "extra": {
+        "homeProb": 0.2804,
+        "awayProb": 0.7196
+      }
+    }
+  ]
+}
