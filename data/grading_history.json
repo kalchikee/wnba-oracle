@@ -624,6 +624,71 @@
       "homeScore": 97,
       "awayScore": 70,
       "gradedAt": "2026-05-26T10:21:45.996314+00:00"
+    },
+    {
+      "date": "2026-05-27",
+      "gameId": "wnba-2026-05-27-PHX-NY",
+      "away": "PHX",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.6042,
+      "actualWinner": "NY",
+      "correct": true,
+      "homeScore": 84,
+      "awayScore": 74,
+      "gradedAt": "2026-05-28T10:25:02.670395+00:00"
+    },
+    {
+      "date": "2026-05-27",
+      "gameId": "wnba-2026-05-27-TOR-CHI",
+      "away": "TOR",
+      "home": "CHI",
+      "pickedTeam": "TOR",
+      "modelProb": 0.6544,
+      "actualWinner": "TOR",
+      "correct": true,
+      "homeScore": 104,
+      "awayScore": 111,
+      "gradedAt": "2026-05-28T10:25:02.670417+00:00"
+    },
+    {
+      "date": "2026-05-27",
+      "gameId": "wnba-2026-05-27-ATL-MIN",
+      "away": "ATL",
+      "home": "MIN",
+      "pickedTeam": "MIN",
+      "modelProb": 0.6479,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 96,
+      "awayScore": 81,
+      "gradedAt": "2026-05-28T10:25:02.670421+00:00"
+    },
+    {
+      "date": "2026-05-27",
+      "gameId": "wnba-2026-05-27-CON-POR",
+      "away": "CON",
+      "home": "POR",
+      "pickedTeam": "POR",
+      "modelProb": 0.6716,
+      "actualWinner": "POR",
+      "correct": true,
+      "homeScore": 71,
+      "awayScore": 61,
+      "gradedAt": "2026-05-28T10:25:02.670425+00:00"
+    },
+    {
+      "date": "2026-05-27",
+      "gameId": "wnba-2026-05-27-WSH-SEA",
+      "away": "WSH",
+      "home": "SEA",
+      "pickedTeam": "SEA",
+      "modelProb": 0.6716,
+      "actualWinner": "WSH",
+      "correct": false,
+      "homeScore": 64,
+      "awayScore": 78,
+      "gradedAt": "2026-05-28T10:25:02.670428+00:00"
     }
   ]
 }
