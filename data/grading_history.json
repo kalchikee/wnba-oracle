@@ -689,6 +689,19 @@
       "homeScore": 64,
       "awayScore": 78,
       "gradedAt": "2026-05-28T10:25:02.670428+00:00"
+    },
+    {
+      "date": "2026-05-28",
+      "gameId": "wnba-2026-05-28-LV-DAL",
+      "away": "LV",
+      "home": "DAL",
+      "pickedTeam": "LV",
+      "modelProb": 0.7196,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 95,
+      "awayScore": 87,
+      "gradedAt": "2026-05-29T10:18:54.535895+00:00"
     }
   ]
 }
