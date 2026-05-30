@@ -702,6 +702,32 @@
       "homeScore": 95,
       "awayScore": 87,
       "gradedAt": "2026-05-29T10:18:54.535895+00:00"
+    },
+    {
+      "date": "2026-05-29",
+      "gameId": "wnba-2026-05-29-PHX-NY",
+      "away": "PHX",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.6042,
+      "actualWinner": "NY",
+      "correct": true,
+      "homeScore": 75,
+      "awayScore": 68,
+      "gradedAt": "2026-05-30T09:35:00.025688+00:00"
+    },
+    {
+      "date": "2026-05-29",
+      "gameId": "wnba-2026-05-29-MIN-CHI",
+      "away": "MIN",
+      "home": "CHI",
+      "pickedTeam": "MIN",
+      "modelProb": 0.7196,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 58,
+      "awayScore": 79,
+      "gradedAt": "2026-05-30T09:35:00.025709+00:00"
     }
   ]
 }
