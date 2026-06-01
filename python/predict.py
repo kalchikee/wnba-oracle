@@ -9,7 +9,7 @@ Usage:
   python python/predict.py              # today's games
   python python/predict.py --date 20261005
 """
-import argparse, json, math, time, requests
+import argparse, json, math, os, time, requests
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
@@ -142,6 +142,14 @@ def load_model(date_str: str) -> dict | None:
         return None
 
 
+# Top-end overconfidence cap. Season-to-date the model's 80%+ tier hit
+# only 33% (n=6) while 70-75% hit 71% (n=7), so above ~75% the declared
+# probability stops tracking actual win rate. Clamping into [1-CAP, CAP]
+# preserves which TEAM is picked but bounds the size kalshi-safety bets
+# via Kelly. Lift this once recalibration on more data justifies it.
+WNBA_PROB_CAP = float(os.environ.get("WNBA_PROB_CAP", "0.75"))
+
+
 def predict_proba(model: dict, fv: dict) -> float:
     features  = model["meta"]["feature_names"]
     coeff_map = model["coeff"]
@@ -159,16 +167,23 @@ def predict_proba(model: dict, fv: dict) -> float:
     bins  = calib.get("x_thresholds", calib.get("bins", []))
     cals  = calib.get("y_thresholds", calib.get("calibrated", []))
     if not bins or not cals:
-        return raw
+        return _cap(raw)
     if raw <= bins[0]:
-        return cals[0]
+        return _cap(cals[0])
     if raw >= bins[-1]:
-        return cals[-1]
+        return _cap(cals[-1])
     for i in range(len(bins) - 1):
         if bins[i] <= raw <= bins[i + 1]:
             t = (raw - bins[i]) / (bins[i + 1] - bins[i])
-            return cals[i] + t * (cals[i + 1] - cals[i])
-    return raw
+            return _cap(cals[i] + t * (cals[i + 1] - cals[i]))
+    return _cap(raw)
+
+
+def _cap(p: float) -> float:
+    lo, hi = 1.0 - WNBA_PROB_CAP, WNBA_PROB_CAP
+    if p > hi: return hi
+    if p < lo: return lo
+    return p
 
 
 def build_features(elo_ratings: dict, h_abbr: str, a_abbr: str,
