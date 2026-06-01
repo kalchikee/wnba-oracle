@@ -728,6 +728,19 @@
       "homeScore": 58,
       "awayScore": 79,
       "gradedAt": "2026-05-30T09:35:00.025709+00:00"
+    },
+    {
+      "date": "2026-05-31",
+      "gameId": "wnba-2026-05-31-LV-GS",
+      "away": "LV",
+      "home": "GS",
+      "pickedTeam": "LV",
+      "modelProb": 0.6809,
+      "actualWinner": "LV",
+      "correct": true,
+      "homeScore": 81,
+      "awayScore": 91,
+      "gradedAt": "2026-06-01T10:41:23.190340+00:00"
     }
   ]
 }
