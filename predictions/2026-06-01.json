@@ -1,0 +1,19 @@
+{
+  "sport": "WNBA",
+  "date": "2026-06-01",
+  "generatedAt": "2026-06-01T12:54:43Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-06-01-SEA-DAL",
+      "home": "DAL",
+      "away": "SEA",
+      "pickedTeam": "SEA",
+      "pickedSide": "away",
+      "modelProb": 0.6751,
+      "extra": {
+        "homeProb": 0.3249,
+        "awayProb": 0.6751
+      }
+    }
+  ]
+}
