@@ -17,6 +17,18 @@ PREDICTIONS_DIR = ROOT / "predictions"
 MIN_PROB = float(os.environ.get("KALSHI_MIN_PROB", "0.58"))
 
 
+# Mirrors NBA Oracle's confidence ladder (src/kalshi/predictionsFile.ts +
+# src/features/marketEdge.ts) so kalshi-safety can read the same tier field
+# from either sport and the Discord embed uses the same emoji ladder.
+def confidence_tier(prob: float) -> str:
+    p = max(prob, 1.0 - prob)
+    if p >= 0.72: return "extreme"
+    if p >= 0.67: return "high"
+    if p >= 0.62: return "medium"
+    if p >= 0.57: return "low"
+    return "none"
+
+
 def _normalize_date(date_str: str) -> str:
     """Return an ISO YYYY-MM-DD date from either YYYYMMDD or YYYY-MM-DD input."""
     s = date_str.strip()
@@ -53,6 +65,7 @@ def write_predictions_file(date: str, results: list[dict]) -> str:
             "pickedTeam": home if favored_home else away,
             "pickedSide": "home" if favored_home else "away",
             "modelProb": round(model_prob, 4),
+            "confidenceTier": confidence_tier(model_prob),
             "extra": {
                 "homeProb": round(home_prob, 4),
                 "awayProb": round(away_prob, 4),

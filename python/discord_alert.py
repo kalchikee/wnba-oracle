@@ -19,10 +19,22 @@ from predict import (
     load_model, build_elo_from_history, fetch_games, fetch_team_record,
     build_features, predict_proba,
 )
-from predictions_file import write_predictions_file
+from predictions_file import write_predictions_file, confidence_tier
 from recap import load_history, compute_season_stats
 import time
 from datetime import timedelta
+
+
+# Mirrors NBA Oracle's emoji ladder (src/alerts/discord.ts confidenceBar) so
+# WNBA and NBA Discord embeds use the same visual scale instead of WNBA's
+# previous single-threshold ⭐ at 65%.
+def confidence_bar(prob: float) -> str:
+    p = max(prob, 1.0 - prob)
+    if p >= 0.72: return "🔥🔥🔥"
+    if p >= 0.67: return "🔥🔥"
+    if p >= 0.60: return "🔥"
+    if p >= 0.55: return "✅"
+    return "🪙"
 
 WEBHOOK = os.environ.get("DISCORD_WEBHOOK_URL", "")
 
@@ -87,15 +99,20 @@ def main():
     # Build embed
     results.sort(key=lambda x: -max(x["home_prob"], x["away_prob"]))
     field_lines = []
-    hc_count = 0
+    # NBA-parity tier counters — same buckets as src/alerts/discord.ts.
+    tier_counts = {"extreme": 0, "high": 0, "medium": 0, "low": 0, "none": 0}
+    bet_count = 0  # tier >= high (≥67%), matches NBA's shouldBet threshold
     for r in results:
         pick = r["home_abbr"] if r["home_prob"] >= r["away_prob"] else r["away_abbr"]
         pick_prob = max(r["home_prob"], r["away_prob"])
-        star = " ⭐" if pick_prob >= 0.65 else ""
-        hc_count += 1 if pick_prob >= 0.65 else 0
+        tier = confidence_tier(pick_prob)
+        tier_counts[tier] += 1
+        if tier in ("extreme", "high"):
+            bet_count += 1
+        bar = confidence_bar(pick_prob)
         field_lines.append(
-            f"**{r['away_abbr']} @ {r['home_abbr']}** → **{pick}** "
-            f"({pick_prob*100:.1f}%){star}"
+            f"{bar} **{r['away_abbr']} @ {r['home_abbr']}** → **{pick}** "
+            f"({pick_prob*100:.1f}%)"
         )
 
     # Season accuracy — pulled from data/grading_history.json (populated by
@@ -126,7 +143,10 @@ def main():
     embed = {
         "title": f"🏀 WNBA Oracle — {date_display}",
         "description": (
-            f"**{len(results)} game(s)** · **{hc_count}** high-conviction (65%+)"
+            f"**{len(results)} game(s)** · **{bet_count}** to bet (≥67%) · "
+            f"🔥🔥🔥 {tier_counts['extreme']} · 🔥🔥 {tier_counts['high']} · "
+            f"🔥 {tier_counts['medium']} · ✅ {tier_counts['low']} · "
+            f"🪙 {tier_counts['none']}"
         ),
         "color": 0xFF6600,  # WNBA orange
         "fields": fields,
