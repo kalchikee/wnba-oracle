@@ -17,7 +17,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.path.insert(0, str(Path(__file__).parent))
 from predict import (
     load_model, build_elo_from_history, fetch_games, fetch_team_record,
-    build_features, predict_proba,
+    fetch_team_recent_form, build_features, predict_proba,
 )
 from predictions_file import write_predictions_file, confidence_tier
 from recap import load_history, compute_season_stats
@@ -74,9 +74,12 @@ def main():
     for game in scheduled:
         h_rec = fetch_team_record(game["home_id"])
         a_rec = fetch_team_record(game["away_id"])
+        h_form = fetch_team_recent_form(game["home_id"])
+        a_form = fetch_team_recent_form(game["away_id"])
         time.sleep(0.1)
         fv = build_features(elo, game["home_abbr"], game["away_abbr"],
-                            h_rec, a_rec, game.get("neutral", 0))
+                            h_rec, a_rec, game.get("neutral", 0),
+                            h_form=h_form, a_form=a_form)
         home_p = predict_proba(model, fv)
         results.append({
             "home_abbr": game["home_abbr"],

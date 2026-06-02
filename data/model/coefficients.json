@@ -1,8 +1,10 @@
 {
-  "_intercept": 0.21957792301991533,
-  "elo_diff": 0.757537703498908,
+  "_intercept": 0.2236308559726819,
+  "elo_diff": 0.45771915142949543,
   "win_pct_diff": 0.0,
   "log5_prob": 0.0,
   "pythagorean_diff": 0.0,
-  "is_home": -0.021917823338020746
+  "is_home": -0.03081654100227722,
+  "recent_10_net_pts_diff": 0.41147494166180193,
+  "recent_10_win_pct_diff": 0.01785238453318975
 }

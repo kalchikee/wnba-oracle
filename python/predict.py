@@ -91,6 +91,63 @@ def fetch_team_record(team_id: str) -> dict:
     return result
 
 
+def fetch_team_recent_form(team_id: str, n_games: int = 10) -> dict:
+    """Return last-n completed-game stats for a team from ESPN.
+
+    Returns {net_pts, win_pct, games} where net_pts is avg per-game point
+    differential and win_pct is W/(W+L). Defaults to neutral (0.0, 0.5) on
+    fetch failure or thin data — training used the same fallback in
+    build_dataset.last10_stats when a team has < 3 games of history."""
+    fallback = {"net_pts": 0.0, "win_pct": 0.5, "games": 0}
+    try:
+        # ESPN's team schedule endpoint returns recent events with scores.
+        data = fetch_json(
+            f"{ESPN_BASE}/teams/{team_id}/schedule"
+        )
+    except Exception:
+        return fallback
+
+    events = data.get("events", []) or []
+    completed = []
+    for ev in events:
+        comp = (ev.get("competitions") or [{}])[0]
+        status = comp.get("status", {}).get("type", {}).get("completed")
+        if not status:
+            continue
+        competitors = comp.get("competitors", []) or []
+        if len(competitors) != 2:
+            continue
+        # Find this team's row + the opponent's row
+        my = next((c for c in competitors if str(c.get("id")) == str(team_id)
+                   or str(c.get("team", {}).get("id")) == str(team_id)), None)
+        opp = next((c for c in competitors if c is not my), None)
+        if not my or not opp:
+            continue
+        try:
+            my_score  = int(my.get("score", 0) or 0)
+            opp_score = int(opp.get("score", 0) or 0)
+        except (TypeError, ValueError):
+            continue
+        if my_score == 0 and opp_score == 0:
+            continue  # likely not actually played
+        completed.append({
+            "date": ev.get("date", ""),
+            "pt_diff": my_score - opp_score,
+            "won": 1 if my_score > opp_score else 0,
+        })
+
+    if len(completed) < 3:
+        return fallback
+
+    completed.sort(key=lambda x: x["date"], reverse=True)
+    last_n = completed[:n_games]
+    return {
+        "net_pts": sum(x["pt_diff"] for x in last_n) / len(last_n),
+        "win_pct": sum(x["won"] for x in last_n) / len(last_n),
+        "games": len(last_n),
+    }
+
+
 def build_elo_from_history() -> dict:
     if not HIST_CSV.exists():
         return {}
@@ -187,19 +244,26 @@ def _cap(p: float) -> float:
 
 
 def build_features(elo_ratings: dict, h_abbr: str, a_abbr: str,
-                   h_rec: dict, a_rec: dict, neutral: int = 0) -> dict:
+                   h_rec: dict, a_rec: dict, neutral: int = 0,
+                   h_form: dict | None = None, a_form: dict | None = None) -> dict:
     rh   = elo_ratings.get(h_abbr, INITIAL_ELO)
     ra   = elo_ratings.get(a_abbr, INITIAL_ELO)
     h_wp = h_rec["win_pct"]
     a_wp = a_rec["win_pct"]
     log5 = h_wp / (h_wp + a_wp) if (h_wp + a_wp) > 0 else 0.5
+    h_net = (h_form or {}).get("net_pts", 0.0)
+    a_net = (a_form or {}).get("net_pts", 0.0)
+    h_rec_wp = (h_form or {}).get("win_pct", 0.5)
+    a_rec_wp = (a_form or {}).get("win_pct", 0.5)
     return {
-        "elo_diff":           rh - ra,
-        "win_pct_diff":       h_wp - a_wp,
-        "log5_prob":          log5,
-        "pythagorean_diff":   h_wp - a_wp,
-        "is_home":            1.0 - float(neutral),
-        "is_neutral":         float(neutral),
+        "elo_diff":                 rh - ra,
+        "win_pct_diff":             h_wp - a_wp,
+        "log5_prob":                log5,
+        "pythagorean_diff":         h_wp - a_wp,
+        "is_home":                  1.0 - float(neutral),
+        "is_neutral":               float(neutral),
+        "recent_10_net_pts_diff":   h_net - a_net,
+        "recent_10_win_pct_diff":   h_rec_wp - a_rec_wp,
     }
 
 
@@ -266,10 +330,13 @@ def main():
     for game in scheduled:
         h_rec = fetch_team_record(game["home_id"])
         a_rec = fetch_team_record(game["away_id"])
+        h_form = fetch_team_recent_form(game["home_id"])
+        a_form = fetch_team_recent_form(game["away_id"])
         time.sleep(0.1)
 
         fv     = build_features(elo, game["home_abbr"], game["away_abbr"],
-                                h_rec, a_rec, game.get("neutral", 0))
+                                h_rec, a_rec, game.get("neutral", 0),
+                                h_form=h_form, a_form=a_form)
         home_p = predict_proba(model, fv)
 
         results.append({

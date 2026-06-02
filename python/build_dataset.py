@@ -126,8 +126,26 @@ def fetch_season_games(year: int) -> list:
 
 
 def build_elo(games: list) -> list:
+    """Walk games chronologically, build Elo + rolling 10-game form features.
+
+    The rolling features look only at the team's prior games (no leakage) and
+    are zero-filled until each team has 3 games of history. Net point diff and
+    recent win pct over the last 10 games capture form/injury context that
+    season-long win% misses; these are the most lift-per-unit-effort features
+    available without box scores."""
     elo = defaultdict(lambda: INITIAL_ELO)
+    # Per-team deque of (date, point_diff, won) for the last 10 games.
+    from collections import deque
+    form: dict[str, deque] = defaultdict(lambda: deque(maxlen=10))
     rows = []
+
+    def last10_stats(team: str) -> tuple[float, float]:
+        d = form[team]
+        if len(d) < 3:
+            return 0.0, 0.5
+        net = sum(x[1] for x in d) / len(d)
+        win_pct = sum(x[2] for x in d) / len(d)
+        return net, win_pct
 
     for g in sorted(games, key=lambda x: (x["season"], x["game_date"])):
         h, a    = g["home_team"], g["away_team"]
@@ -141,25 +159,38 @@ def build_elo(games: list) -> list:
         h_wp = g.get("h_win_pct", 0.5)
         a_wp = g.get("a_win_pct", 0.5)
 
+        # Pull last-10 BEFORE this game so the features don't leak the result.
+        h_net, h_recent_wp = last10_stats(h)
+        a_net, a_recent_wp = last10_stats(a)
+
         rows.append({
-            "season":        g["season"],
-            "game_date":     g["game_date"],
-            "home_team":     h,
-            "away_team":     a,
-            "home_score":    g["home_score"],
-            "away_score":    g["away_score"],
-            "home_win":      hw,
-            "label":         hw,
-            "neutral":       neutral,
-            "elo_diff":      rh - ra,
-            "win_pct_diff":  h_wp - a_wp,
-            "log5_prob":     h_wp / (h_wp + a_wp) if (h_wp + a_wp) > 0 else 0.5,
-            "pythagorean_diff": h_wp - a_wp,
-            "is_home":       1.0 - neutral,
+            "season":             g["season"],
+            "game_date":          g["game_date"],
+            "home_team":          h,
+            "away_team":          a,
+            "home_score":         g["home_score"],
+            "away_score":         g["away_score"],
+            "home_win":           hw,
+            "label":              hw,
+            "neutral":            neutral,
+            "elo_diff":           rh - ra,
+            "win_pct_diff":       h_wp - a_wp,
+            "log5_prob":          h_wp / (h_wp + a_wp) if (h_wp + a_wp) > 0 else 0.5,
+            "pythagorean_diff":   h_wp - a_wp,
+            "is_home":            1.0 - neutral,
+            "recent_10_net_pts_diff":  h_net - a_net,
+            "recent_10_win_pct_diff":  h_recent_wp - a_recent_wp,
+            "home_last10_net_pts":     h_net,
+            "away_last10_net_pts":     a_net,
         })
 
+        # Update Elo + form AFTER recording the row (so the row's features
+        # reflect pre-game state only).
         elo[h] = rh + delta
         elo[a] = ra - delta
+        pt_diff = g["home_score"] - g["away_score"]
+        form[h].append((g["game_date"], pt_diff,  hw))
+        form[a].append((g["game_date"], -pt_diff, 1 - hw))
 
     return rows
 

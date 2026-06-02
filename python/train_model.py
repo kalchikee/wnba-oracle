@@ -26,6 +26,8 @@ HIST_CSV  = DATA_DIR / "training_data.csv"
 FEATURE_NAMES = [
     "elo_diff", "win_pct_diff", "log5_prob",
     "pythagorean_diff", "is_home",
+    # Recent form (last 10 games, no leakage) — see build_dataset.build_elo
+    "recent_10_net_pts_diff", "recent_10_win_pct_diff",
 ]
 
 
