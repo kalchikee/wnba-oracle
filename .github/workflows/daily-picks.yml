@@ -35,6 +35,10 @@ jobs:
       - name: Send Discord predictions
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # Optional: when set, predictions.json includes vegasProb + edge
+          # and the Discord embed shows the model-vs-Vegas delta per pick.
+          # Pipeline is unchanged when the secret isn't configured.
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
           KALSHI_MIN_PROB: '0.58'
         run: |
           if [ -n "${{ github.event.inputs.date }}" ]; then

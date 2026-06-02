@@ -21,6 +21,7 @@ from predict import (
 )
 from predictions_file import write_predictions_file, confidence_tier
 from recap import load_history, compute_season_stats
+from odds_client import fetch_wnba_odds
 import time
 from datetime import timedelta
 
@@ -70,6 +71,12 @@ def main():
         return
 
     scheduled = [g for g in games if "SCHEDULED" in g["status"]] or games
+
+    # Single Odds API call covers all of today's games — empty dict if key
+    # is unset or coverage is missing, in which case the rest of the
+    # pipeline runs unchanged. {"AWAY-HOME": home_vegas_prob}
+    vegas_lookup = fetch_wnba_odds()
+
     results = []
     for game in scheduled:
         h_rec = fetch_team_record(game["home_id"])
@@ -81,11 +88,13 @@ def main():
                             h_rec, a_rec, game.get("neutral", 0),
                             h_form=h_form, a_form=a_form)
         home_p = predict_proba(model, fv)
+        key = f"{game['away_abbr']}-{game['home_abbr']}"
         results.append({
             "home_abbr": game["home_abbr"],
             "away_abbr": game["away_abbr"],
             "home_prob": home_p,
             "away_prob": 1.0 - home_p,
+            "vegas_home_prob": vegas_lookup.get(key),
         })
 
     if not results:
@@ -113,9 +122,16 @@ def main():
         if tier in ("extreme", "high"):
             bet_count += 1
         bar = confidence_bar(pick_prob)
+        edge_str = ""
+        vp = r.get("vegas_home_prob")
+        if vp is not None:
+            vegas_pick_prob = vp if pick == r["home_abbr"] else 1.0 - vp
+            edge_pp = (pick_prob - vegas_pick_prob) * 100
+            sign = "+" if edge_pp >= 0 else ""
+            edge_str = f" · vs Vegas {sign}{edge_pp:.1f}pp"
         field_lines.append(
             f"{bar} **{r['away_abbr']} @ {r['home_abbr']}** → **{pick}** "
-            f"({pick_prob*100:.1f}%)"
+            f"({pick_prob*100:.1f}%){edge_str}"
         )
 
     # Season accuracy — pulled from data/grading_history.json (populated by

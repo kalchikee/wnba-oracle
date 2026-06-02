@@ -58,6 +58,11 @@ def write_predictions_file(date: str, results: list[dict]) -> str:
             continue
         home = str(r.get("home_abbr", ""))
         away = str(r.get("away_abbr", ""))
+        vegas_home_prob = r.get("vegas_home_prob")
+        edge = None
+        if vegas_home_prob is not None:
+            vegas_pick_prob = vegas_home_prob if favored_home else 1.0 - vegas_home_prob
+            edge = round(model_prob - vegas_pick_prob, 4)
         picks.append({
             "gameId": f"wnba-{iso_date}-{away}-{home}",
             "home": home,
@@ -65,6 +70,8 @@ def write_predictions_file(date: str, results: list[dict]) -> str:
             "pickedTeam": home if favored_home else away,
             "pickedSide": "home" if favored_home else "away",
             "modelProb": round(model_prob, 4),
+            "vegasProb": round(vegas_home_prob, 4) if vegas_home_prob is not None else None,
+            "edge": edge,
             "confidenceTier": confidence_tier(model_prob),
             "extra": {
                 "homeProb": round(home_prob, 4),
