@@ -858,6 +858,32 @@
       "homeScore": 87,
       "awayScore": 84,
       "gradedAt": "2026-06-05T10:19:50.799597+00:00"
+    },
+    {
+      "date": "2026-06-05",
+      "gameId": "wnba-2026-06-05-DAL-LA",
+      "away": "DAL",
+      "home": "LA",
+      "pickedTeam": "LA",
+      "modelProb": 0.6336,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 96,
+      "awayScore": 104,
+      "gradedAt": "2026-06-06T09:38:34.182196+00:00"
+    },
+    {
+      "date": "2026-06-05",
+      "gameId": "wnba-2026-06-05-PHX-POR",
+      "away": "PHX",
+      "home": "POR",
+      "pickedTeam": "POR",
+      "modelProb": 0.6159,
+      "actualWinner": "PHX",
+      "correct": false,
+      "homeScore": 72,
+      "awayScore": 78,
+      "gradedAt": "2026-06-06T09:38:34.182222+00:00"
     }
   ]
 }
