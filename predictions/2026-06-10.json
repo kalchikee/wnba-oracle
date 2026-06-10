@@ -1,0 +1,37 @@
+{
+  "sport": "WNBA",
+  "date": "2026-06-10",
+  "generatedAt": "2026-06-10T12:07:28Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-06-10-CON-TOR",
+      "home": "TOR",
+      "away": "CON",
+      "pickedTeam": "TOR",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-06-10-LA-SEA",
+      "home": "SEA",
+      "away": "LA",
+      "pickedTeam": "SEA",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
