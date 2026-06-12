@@ -1066,6 +1066,58 @@
       "homeScore": 83,
       "awayScore": 88,
       "gradedAt": "2026-06-11T10:30:00.390063+00:00"
+    },
+    {
+      "date": "2026-06-11",
+      "gameId": "wnba-2026-06-11-CHI-IND",
+      "away": "CHI",
+      "home": "IND",
+      "pickedTeam": "IND",
+      "modelProb": 0.7077,
+      "actualWinner": "IND",
+      "correct": true,
+      "homeScore": 114,
+      "awayScore": 106,
+      "gradedAt": "2026-06-12T10:28:40.019134+00:00"
+    },
+    {
+      "date": "2026-06-11",
+      "gameId": "wnba-2026-06-11-NY-ATL",
+      "away": "NY",
+      "home": "ATL",
+      "pickedTeam": "ATL",
+      "modelProb": 0.617,
+      "actualWinner": "NY",
+      "correct": false,
+      "homeScore": 90,
+      "awayScore": 104,
+      "gradedAt": "2026-06-12T10:28:40.019164+00:00"
+    },
+    {
+      "date": "2026-06-11",
+      "gameId": "wnba-2026-06-11-PHX-DAL",
+      "away": "PHX",
+      "home": "DAL",
+      "pickedTeam": "PHX",
+      "modelProb": 0.6075,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 85,
+      "awayScore": 70,
+      "gradedAt": "2026-06-12T10:28:40.019169+00:00"
+    },
+    {
+      "date": "2026-06-11",
+      "gameId": "wnba-2026-06-11-LV-POR",
+      "away": "LV",
+      "home": "POR",
+      "pickedTeam": "LV",
+      "modelProb": 0.5956,
+      "actualWinner": "LV",
+      "correct": true,
+      "homeScore": 89,
+      "awayScore": 105,
+      "gradedAt": "2026-06-12T10:28:40.019173+00:00"
     }
   ]
 }
