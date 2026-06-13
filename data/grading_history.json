@@ -1118,6 +1118,32 @@
       "homeScore": 89,
       "awayScore": 105,
       "gradedAt": "2026-06-12T10:28:40.019173+00:00"
+    },
+    {
+      "date": "2026-06-12",
+      "gameId": "wnba-2026-06-12-TOR-WSH",
+      "away": "TOR",
+      "home": "WSH",
+      "pickedTeam": "TOR",
+      "modelProb": 0.5844,
+      "actualWinner": "WSH",
+      "correct": false,
+      "homeScore": 86,
+      "awayScore": 85,
+      "gradedAt": "2026-06-13T09:59:19.609599+00:00"
+    },
+    {
+      "date": "2026-06-12",
+      "gameId": "wnba-2026-06-12-GS-SEA",
+      "away": "GS",
+      "home": "SEA",
+      "pickedTeam": "SEA",
+      "modelProb": 0.617,
+      "actualWinner": "GS",
+      "correct": false,
+      "homeScore": 72,
+      "awayScore": 76,
+      "gradedAt": "2026-06-13T09:59:19.609617+00:00"
     }
   ]
 }
