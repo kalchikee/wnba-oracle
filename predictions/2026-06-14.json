@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-06-14",
+  "generatedAt": "2026-06-14T11:43:19Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-06-14-WSH-NY",
+      "home": "NY",
+      "away": "WSH",
+      "pickedTeam": "NY",
+      "pickedSide": "home",
+      "modelProb": 0.6687,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "medium",
+      "extra": {
+        "homeProb": 0.6687,
+        "awayProb": 0.3313
+      }
+    }
+  ]
+}
