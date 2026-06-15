@@ -1196,6 +1196,19 @@
       "homeScore": 102,
       "awayScore": 111,
       "gradedAt": "2026-06-14T10:08:35.593237+00:00"
+    },
+    {
+      "date": "2026-06-14",
+      "gameId": "wnba-2026-06-14-WSH-NY",
+      "away": "WSH",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.6687,
+      "actualWinner": "NY",
+      "correct": true,
+      "homeScore": 86,
+      "awayScore": 64,
+      "gradedAt": "2026-06-15T10:59:30.584132+00:00"
     }
   ]
 }
