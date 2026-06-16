@@ -1209,6 +1209,45 @@
       "homeScore": 86,
       "awayScore": 64,
       "gradedAt": "2026-06-15T10:59:30.584132+00:00"
+    },
+    {
+      "date": "2026-06-15",
+      "gameId": "wnba-2026-06-15-LV-DAL",
+      "away": "LV",
+      "home": "DAL",
+      "pickedTeam": "LV",
+      "modelProb": 0.7056,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 96,
+      "awayScore": 66,
+      "gradedAt": "2026-06-16T10:34:39.181674+00:00"
+    },
+    {
+      "date": "2026-06-15",
+      "gameId": "wnba-2026-06-15-POR-MIN",
+      "away": "POR",
+      "home": "MIN",
+      "pickedTeam": "MIN",
+      "modelProb": 0.617,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 107,
+      "awayScore": 74,
+      "gradedAt": "2026-06-16T10:34:39.181696+00:00"
+    },
+    {
+      "date": "2026-06-15",
+      "gameId": "wnba-2026-06-15-LA-GS",
+      "away": "LA",
+      "home": "GS",
+      "pickedTeam": "GS",
+      "modelProb": 0.617,
+      "actualWinner": "GS",
+      "correct": true,
+      "homeScore": 78,
+      "awayScore": 58,
+      "gradedAt": "2026-06-16T10:34:39.181700+00:00"
     }
   ]
 }
