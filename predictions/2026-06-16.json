@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-06-16",
+  "generatedAt": "2026-06-16T12:38:01Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-06-16-TOR-IND",
+      "home": "IND",
+      "away": "TOR",
+      "pickedTeam": "IND",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
