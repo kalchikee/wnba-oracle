@@ -1248,6 +1248,19 @@
       "homeScore": 78,
       "awayScore": 58,
       "gradedAt": "2026-06-16T10:34:39.181700+00:00"
+    },
+    {
+      "date": "2026-06-16",
+      "gameId": "wnba-2026-06-16-TOR-IND",
+      "away": "TOR",
+      "home": "IND",
+      "pickedTeam": "IND",
+      "modelProb": 0.617,
+      "actualWinner": "IND",
+      "correct": true,
+      "homeScore": 113,
+      "awayScore": 91,
+      "gradedAt": "2026-06-17T10:31:41.892069+00:00"
     }
   ]
 }
