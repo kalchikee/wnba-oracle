@@ -214,6 +214,42 @@ def compute_season_stats(history: dict) -> dict:
     return {"total": total, "correct": correct, "accuracy": accuracy}
 
 
+# Confidence buckets shown in the Discord embed so the user can see how
+# the model's declared probability tracks reality at each tier. Each
+# bucket is half-open [lo, hi). modelProb is the picked-side probability
+# so the lowest possible value is 0.5.
+CONFIDENCE_BUCKETS = [
+    (0.50, 0.60, "50-60%"),
+    (0.60, 0.70, "60-70%"),
+    (0.70, 0.80, "70-80%"),
+    (0.80, 0.90, "80-90%"),
+    (0.90, 1.01, "90%+"),
+]
+
+
+def compute_confidence_buckets(history: dict) -> list[dict]:
+    """For each confidence bucket return {label, total, correct, accuracy}.
+
+    Only buckets with at least one graded pick are returned, so the
+    embed doesn't carry empty rows when the season is young."""
+    graded = history.get("graded", [])
+    out = []
+    for lo, hi, label in CONFIDENCE_BUCKETS:
+        rows = [g for g in graded
+                if g.get("modelProb") is not None
+                and lo <= float(g["modelProb"]) < hi]
+        if not rows:
+            continue
+        correct = sum(1 for r in rows if r.get("correct"))
+        out.append({
+            "label":    label,
+            "total":    len(rows),
+            "correct":  correct,
+            "accuracy": correct / len(rows),
+        })
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", help="YYYYMMDD or YYYY-MM-DD; grade only this date")

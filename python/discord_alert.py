@@ -20,7 +20,7 @@ from predict import (
     fetch_team_recent_form, build_features, predict_proba,
 )
 from predictions_file import write_predictions_file, confidence_tier
-from recap import load_history, compute_season_stats
+from recap import load_history, compute_season_stats, compute_confidence_buckets
 from odds_client import fetch_wnba_odds
 import time
 from datetime import timedelta
@@ -139,7 +139,8 @@ def main():
     # least one graded prediction.
     fields = []
     try:
-        season = compute_season_stats(load_history())
+        history = load_history()
+        season = compute_season_stats(history)
         if season["total"] > 0:
             fields.append({
                 "name": "📊 Season Accuracy",
@@ -149,6 +150,21 @@ def main():
                 ),
                 "inline": False,
             })
+            # Per-bucket calibration so the user can see how accurate the
+            # model is at each declared-confidence tier (e.g. "of picks
+            # we tagged 70-80%, how many actually won").
+            buckets = compute_confidence_buckets(history)
+            if buckets:
+                lines = [
+                    f"**{b['label']}** · {b['correct']}/{b['total']} "
+                    f"({b['accuracy']*100:.1f}%)"
+                    for b in buckets
+                ]
+                fields.append({
+                    "name": "🎯 Calibration by confidence",
+                    "value": "\n".join(lines),
+                    "inline": False,
+                })
     except Exception as e:
         print(f"[discord] season-stats read failed (non-blocking): {e}")
 
