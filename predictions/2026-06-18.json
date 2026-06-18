@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-06-18",
+  "generatedAt": "2026-06-18T12:10:40Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-06-18-ATL-IND",
+      "home": "IND",
+      "away": "ATL",
+      "pickedTeam": "IND",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
