@@ -1261,6 +1261,84 @@
       "homeScore": 113,
       "awayScore": 91,
       "gradedAt": "2026-06-17T10:31:41.892069+00:00"
+    },
+    {
+      "date": "2026-06-17",
+      "gameId": "wnba-2026-06-17-WSH-CON",
+      "away": "WSH",
+      "home": "CON",
+      "pickedTeam": "CON",
+      "modelProb": 0.617,
+      "actualWinner": "WSH",
+      "correct": false,
+      "homeScore": 81,
+      "awayScore": 88,
+      "gradedAt": "2026-06-18T10:29:02.717541+00:00"
+    },
+    {
+      "date": "2026-06-17",
+      "gameId": "wnba-2026-06-17-NY-CHI",
+      "away": "NY",
+      "home": "CHI",
+      "pickedTeam": "NY",
+      "modelProb": 0.6279,
+      "actualWinner": "NY",
+      "correct": true,
+      "homeScore": 95,
+      "awayScore": 96,
+      "gradedAt": "2026-06-18T10:29:02.717557+00:00"
+    },
+    {
+      "date": "2026-06-17",
+      "gameId": "wnba-2026-06-17-DAL-GS",
+      "away": "DAL",
+      "home": "GS",
+      "pickedTeam": "GS",
+      "modelProb": 0.6596,
+      "actualWinner": "GS",
+      "correct": true,
+      "homeScore": 91,
+      "awayScore": 80,
+      "gradedAt": "2026-06-18T10:29:02.717562+00:00"
+    },
+    {
+      "date": "2026-06-17",
+      "gameId": "wnba-2026-06-17-MIN-LA",
+      "away": "MIN",
+      "home": "LA",
+      "pickedTeam": "MIN",
+      "modelProb": 0.5956,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 83,
+      "awayScore": 99,
+      "gradedAt": "2026-06-18T10:29:02.717565+00:00"
+    },
+    {
+      "date": "2026-06-17",
+      "gameId": "wnba-2026-06-17-LV-PHX",
+      "away": "LV",
+      "home": "PHX",
+      "pickedTeam": "LV",
+      "modelProb": 0.5956,
+      "actualWinner": "LV",
+      "correct": true,
+      "homeScore": 76,
+      "awayScore": 86,
+      "gradedAt": "2026-06-18T10:29:02.717568+00:00"
+    },
+    {
+      "date": "2026-06-17",
+      "gameId": "wnba-2026-06-17-SEA-POR",
+      "away": "SEA",
+      "home": "POR",
+      "pickedTeam": "POR",
+      "modelProb": 0.617,
+      "actualWinner": "POR",
+      "correct": true,
+      "homeScore": 94,
+      "awayScore": 89,
+      "gradedAt": "2026-06-18T10:29:02.717570+00:00"
     }
   ]
 }
