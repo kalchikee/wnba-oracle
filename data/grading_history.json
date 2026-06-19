@@ -1339,6 +1339,19 @@
       "homeScore": 94,
       "awayScore": 89,
       "gradedAt": "2026-06-18T10:29:02.717570+00:00"
+    },
+    {
+      "date": "2026-06-18",
+      "gameId": "wnba-2026-06-18-ATL-IND",
+      "away": "ATL",
+      "home": "IND",
+      "pickedTeam": "IND",
+      "modelProb": 0.617,
+      "actualWinner": "ATL",
+      "correct": false,
+      "homeScore": 101,
+      "awayScore": 108,
+      "gradedAt": "2026-06-19T10:29:21.481637+00:00"
     }
   ]
 }
