@@ -1352,6 +1352,32 @@
       "homeScore": 101,
       "awayScore": 108,
       "gradedAt": "2026-06-19T10:29:21.481637+00:00"
+    },
+    {
+      "date": "2026-06-19",
+      "gameId": "wnba-2026-06-19-WSH-NY",
+      "away": "WSH",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.6687,
+      "actualWinner": "WSH",
+      "correct": false,
+      "homeScore": 83,
+      "awayScore": 86,
+      "gradedAt": "2026-06-20T10:01:07.114119+00:00"
+    },
+    {
+      "date": "2026-06-19",
+      "gameId": "wnba-2026-06-19-MIN-GS",
+      "away": "MIN",
+      "home": "GS",
+      "pickedTeam": "MIN",
+      "modelProb": 0.5956,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 75,
+      "awayScore": 81,
+      "gradedAt": "2026-06-20T10:01:07.114140+00:00"
     }
   ]
 }
