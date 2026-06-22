@@ -1,0 +1,67 @@
+{
+  "sport": "WNBA",
+  "date": "2026-06-22",
+  "generatedAt": "2026-06-22T12:59:59Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-06-22-CHI-CON",
+      "home": "CON",
+      "away": "CHI",
+      "pickedTeam": "CON",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-06-22-TOR-ATL",
+      "home": "ATL",
+      "away": "TOR",
+      "pickedTeam": "ATL",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-06-22-PHX-IND",
+      "home": "IND",
+      "away": "PHX",
+      "pickedTeam": "IND",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-06-22-DAL-SEA",
+      "home": "SEA",
+      "away": "DAL",
+      "pickedTeam": "SEA",
+      "pickedSide": "home",
+      "modelProb": 0.6642,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "medium",
+      "extra": {
+        "homeProb": 0.6642,
+        "awayProb": 0.3358
+      }
+    }
+  ]
+}
