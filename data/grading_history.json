@@ -1495,6 +1495,19 @@
       "homeScore": 110,
       "awayScore": 112,
       "gradedAt": "2026-06-23T10:13:49.503212+00:00"
+    },
+    {
+      "date": "2026-06-23",
+      "gameId": "wnba-2026-06-23-NY-LV",
+      "away": "NY",
+      "home": "LV",
+      "pickedTeam": "LV",
+      "modelProb": 0.617,
+      "actualWinner": "NY",
+      "correct": false,
+      "homeScore": 76,
+      "awayScore": 87,
+      "gradedAt": "2026-06-24T10:03:29.521579+00:00"
     }
   ]
 }
