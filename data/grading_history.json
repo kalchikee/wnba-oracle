@@ -1547,6 +1547,32 @@
       "homeScore": 101,
       "awayScore": 78,
       "gradedAt": "2026-06-25T10:02:40.328514+00:00"
+    },
+    {
+      "date": "2026-06-25",
+      "gameId": "wnba-2026-06-25-LA-TOR",
+      "away": "LA",
+      "home": "TOR",
+      "pickedTeam": "TOR",
+      "modelProb": 0.617,
+      "actualWinner": "TOR",
+      "correct": true,
+      "homeScore": 125,
+      "awayScore": 97,
+      "gradedAt": "2026-06-26T10:03:47.881103+00:00"
+    },
+    {
+      "date": "2026-06-25",
+      "gameId": "wnba-2026-06-25-DAL-LV",
+      "away": "DAL",
+      "home": "LV",
+      "pickedTeam": "LV",
+      "modelProb": 0.75,
+      "actualWinner": "LV",
+      "correct": true,
+      "homeScore": 99,
+      "awayScore": 84,
+      "gradedAt": "2026-06-26T10:03:47.881124+00:00"
     }
   ]
 }
