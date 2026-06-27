@@ -1573,6 +1573,32 @@
       "homeScore": 99,
       "awayScore": 84,
       "gradedAt": "2026-06-26T10:03:47.881124+00:00"
+    },
+    {
+      "date": "2026-06-26",
+      "gameId": "wnba-2026-06-26-WSH-CON",
+      "away": "WSH",
+      "home": "CON",
+      "pickedTeam": "CON",
+      "modelProb": 0.617,
+      "actualWinner": "CON",
+      "correct": true,
+      "homeScore": 68,
+      "awayScore": 57,
+      "gradedAt": "2026-06-27T09:40:25.391348+00:00"
+    },
+    {
+      "date": "2026-06-26",
+      "gameId": "wnba-2026-06-26-POR-CHI",
+      "away": "POR",
+      "home": "CHI",
+      "pickedTeam": "POR",
+      "modelProb": 0.5956,
+      "actualWinner": "CHI",
+      "correct": false,
+      "homeScore": 124,
+      "awayScore": 94,
+      "gradedAt": "2026-06-27T09:40:25.391370+00:00"
     }
   ]
 }
