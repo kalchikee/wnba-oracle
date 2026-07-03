@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-07-03",
+  "generatedAt": "2026-07-03T11:48:22Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-07-03-CHI-LV",
+      "home": "LV",
+      "away": "CHI",
+      "pickedTeam": "LV",
+      "pickedSide": "home",
+      "modelProb": 0.75,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "extreme",
+      "extra": {
+        "homeProb": 0.75,
+        "awayProb": 0.25
+      }
+    }
+  ]
+}
