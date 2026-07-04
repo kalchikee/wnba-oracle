@@ -1703,6 +1703,19 @@
       "homeScore": 90,
       "awayScore": 67,
       "gradedAt": "2026-07-03T09:59:20.938996+00:00"
+    },
+    {
+      "date": "2026-07-03",
+      "gameId": "wnba-2026-07-03-CHI-LV",
+      "away": "CHI",
+      "home": "LV",
+      "pickedTeam": "LV",
+      "modelProb": 0.75,
+      "actualWinner": "LV",
+      "correct": true,
+      "homeScore": 98,
+      "awayScore": 90,
+      "gradedAt": "2026-07-04T09:41:06.172074+00:00"
     }
   ]
 }
