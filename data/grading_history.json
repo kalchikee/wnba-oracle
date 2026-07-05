@@ -1716,6 +1716,32 @@
       "homeScore": 98,
       "awayScore": 90,
       "gradedAt": "2026-07-04T09:41:06.172074+00:00"
+    },
+    {
+      "date": "2026-07-04",
+      "gameId": "wnba-2026-07-04-GS-ATL",
+      "away": "GS",
+      "home": "ATL",
+      "pickedTeam": "ATL",
+      "modelProb": 0.617,
+      "actualWinner": "GS",
+      "correct": false,
+      "homeScore": 83,
+      "awayScore": 88,
+      "gradedAt": "2026-07-05T09:49:10.083012+00:00"
+    },
+    {
+      "date": "2026-07-04",
+      "gameId": "wnba-2026-07-04-POR-SEA",
+      "away": "POR",
+      "home": "SEA",
+      "pickedTeam": "SEA",
+      "modelProb": 0.617,
+      "actualWinner": "POR",
+      "correct": false,
+      "homeScore": 72,
+      "awayScore": 77,
+      "gradedAt": "2026-07-05T09:49:10.083028+00:00"
     }
   ]
 }
