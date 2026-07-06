@@ -1742,6 +1742,32 @@
       "homeScore": 72,
       "awayScore": 77,
       "gradedAt": "2026-07-05T09:49:10.083028+00:00"
+    },
+    {
+      "date": "2026-07-05",
+      "gameId": "wnba-2026-07-05-DAL-TOR",
+      "away": "DAL",
+      "home": "TOR",
+      "pickedTeam": "TOR",
+      "modelProb": 0.6606,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 76,
+      "awayScore": 89,
+      "gradedAt": "2026-07-06T10:29:40.635086+00:00"
+    },
+    {
+      "date": "2026-07-05",
+      "gameId": "wnba-2026-07-05-IND-LV",
+      "away": "IND",
+      "home": "LV",
+      "pickedTeam": "LV",
+      "modelProb": 0.617,
+      "actualWinner": "IND",
+      "correct": false,
+      "homeScore": 68,
+      "awayScore": 84,
+      "gradedAt": "2026-07-06T10:29:40.635113+00:00"
     }
   ]
 }
