@@ -1768,6 +1768,45 @@
       "homeScore": 68,
       "awayScore": 84,
       "gradedAt": "2026-07-06T10:29:40.635113+00:00"
+    },
+    {
+      "date": "2026-07-06",
+      "gameId": "wnba-2026-07-06-GS-WSH",
+      "away": "GS",
+      "home": "WSH",
+      "pickedTeam": "GS",
+      "modelProb": 0.5806,
+      "actualWinner": "GS",
+      "correct": true,
+      "homeScore": 49,
+      "awayScore": 62,
+      "gradedAt": "2026-07-07T10:09:33.348438+00:00"
+    },
+    {
+      "date": "2026-07-06",
+      "gameId": "wnba-2026-07-06-CON-MIN",
+      "away": "CON",
+      "home": "MIN",
+      "pickedTeam": "MIN",
+      "modelProb": 0.7077,
+      "actualWinner": "CON",
+      "correct": false,
+      "homeScore": 89,
+      "awayScore": 90,
+      "gradedAt": "2026-07-07T10:09:33.348457+00:00"
+    },
+    {
+      "date": "2026-07-06",
+      "gameId": "wnba-2026-07-06-SEA-LA",
+      "away": "SEA",
+      "home": "LA",
+      "pickedTeam": "LA",
+      "modelProb": 0.6162,
+      "actualWinner": "SEA",
+      "correct": false,
+      "homeScore": 64,
+      "awayScore": 82,
+      "gradedAt": "2026-07-07T10:09:33.348462+00:00"
     }
   ]
 }
