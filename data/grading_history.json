@@ -1807,6 +1807,32 @@
       "homeScore": 64,
       "awayScore": 82,
       "gradedAt": "2026-07-07T10:09:33.348462+00:00"
+    },
+    {
+      "date": "2026-07-07",
+      "gameId": "wnba-2026-07-07-DAL-NY",
+      "away": "DAL",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.7077,
+      "actualWinner": "DAL",
+      "correct": false,
+      "homeScore": 77,
+      "awayScore": 88,
+      "gradedAt": "2026-07-08T09:45:38.816507+00:00"
+    },
+    {
+      "date": "2026-07-07",
+      "gameId": "wnba-2026-07-07-CHI-PHX",
+      "away": "CHI",
+      "home": "PHX",
+      "pickedTeam": "PHX",
+      "modelProb": 0.697,
+      "actualWinner": "CHI",
+      "correct": false,
+      "homeScore": 66,
+      "awayScore": 77,
+      "gradedAt": "2026-07-08T09:45:38.816588+00:00"
     }
   ]
 }
