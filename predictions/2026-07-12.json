@@ -1,0 +1,52 @@
+{
+  "sport": "WNBA",
+  "date": "2026-07-12",
+  "generatedAt": "2026-07-12T11:26:32Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-07-12-SEA-WSH",
+      "home": "WSH",
+      "away": "SEA",
+      "pickedTeam": "SEA",
+      "pickedSide": "away",
+      "modelProb": 0.5956,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.4044,
+        "awayProb": 0.5956
+      }
+    },
+    {
+      "gameId": "wnba-2026-07-12-CHI-DAL",
+      "home": "DAL",
+      "away": "CHI",
+      "pickedTeam": "DAL",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-07-12-IND-LV",
+      "home": "LV",
+      "away": "IND",
+      "pickedTeam": "LV",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
