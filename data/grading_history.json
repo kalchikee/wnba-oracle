@@ -2080,6 +2080,19 @@
       "homeScore": 75,
       "awayScore": 88,
       "gradedAt": "2026-07-16T09:38:47.506339+00:00"
+    },
+    {
+      "date": "2026-07-16",
+      "gameId": "wnba-2026-07-16-POR-WSH",
+      "away": "POR",
+      "home": "WSH",
+      "pickedTeam": "POR",
+      "modelProb": 0.5844,
+      "actualWinner": "POR",
+      "correct": true,
+      "homeScore": 56,
+      "awayScore": 75,
+      "gradedAt": "2026-07-17T09:32:24.741911+00:00"
     }
   ]
 }
