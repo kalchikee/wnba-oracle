@@ -2093,6 +2093,45 @@
       "homeScore": 56,
       "awayScore": 75,
       "gradedAt": "2026-07-17T09:32:24.741911+00:00"
+    },
+    {
+      "date": "2026-07-17",
+      "gameId": "wnba-2026-07-17-SEA-IND",
+      "away": "SEA",
+      "home": "IND",
+      "pickedTeam": "IND",
+      "modelProb": 0.617,
+      "actualWinner": "IND",
+      "correct": true,
+      "homeScore": 110,
+      "awayScore": 107,
+      "gradedAt": "2026-07-18T09:28:54.491908+00:00"
+    },
+    {
+      "date": "2026-07-17",
+      "gameId": "wnba-2026-07-17-LA-CHI",
+      "away": "LA",
+      "home": "CHI",
+      "pickedTeam": "LA",
+      "modelProb": 0.5956,
+      "actualWinner": "CHI",
+      "correct": false,
+      "homeScore": 96,
+      "awayScore": 82,
+      "gradedAt": "2026-07-18T09:28:54.491932+00:00"
+    },
+    {
+      "date": "2026-07-17",
+      "gameId": "wnba-2026-07-17-CON-PHX",
+      "away": "CON",
+      "home": "PHX",
+      "pickedTeam": "PHX",
+      "modelProb": 0.6241,
+      "actualWinner": "CON",
+      "correct": false,
+      "homeScore": 83,
+      "awayScore": 96,
+      "gradedAt": "2026-07-18T09:28:54.491936+00:00"
     }
   ]
 }
