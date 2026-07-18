@@ -1,0 +1,52 @@
+{
+  "sport": "WNBA",
+  "date": "2026-07-18",
+  "generatedAt": "2026-07-18T11:23:31Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-07-18-NY-IND",
+      "home": "IND",
+      "away": "NY",
+      "pickedTeam": "IND",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-07-18-POR-MIN",
+      "home": "MIN",
+      "away": "POR",
+      "pickedTeam": "MIN",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-07-18-WSH-GS",
+      "home": "GS",
+      "away": "WSH",
+      "pickedTeam": "GS",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
