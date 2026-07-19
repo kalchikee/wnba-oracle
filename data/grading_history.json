@@ -2132,6 +2132,45 @@
       "homeScore": 83,
       "awayScore": 96,
       "gradedAt": "2026-07-18T09:28:54.491936+00:00"
+    },
+    {
+      "date": "2026-07-18",
+      "gameId": "wnba-2026-07-18-NY-IND",
+      "away": "NY",
+      "home": "IND",
+      "pickedTeam": "IND",
+      "modelProb": 0.617,
+      "actualWinner": "IND",
+      "correct": true,
+      "homeScore": 108,
+      "awayScore": 88,
+      "gradedAt": "2026-07-19T09:32:35.004178+00:00"
+    },
+    {
+      "date": "2026-07-18",
+      "gameId": "wnba-2026-07-18-POR-MIN",
+      "away": "POR",
+      "home": "MIN",
+      "pickedTeam": "MIN",
+      "modelProb": 0.617,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 101,
+      "awayScore": 93,
+      "gradedAt": "2026-07-19T09:32:35.004203+00:00"
+    },
+    {
+      "date": "2026-07-18",
+      "gameId": "wnba-2026-07-18-WSH-GS",
+      "away": "WSH",
+      "home": "GS",
+      "pickedTeam": "GS",
+      "modelProb": 0.617,
+      "actualWinner": "GS",
+      "correct": true,
+      "homeScore": 74,
+      "awayScore": 69,
+      "gradedAt": "2026-07-19T09:32:35.004207+00:00"
     }
   ]
 }
