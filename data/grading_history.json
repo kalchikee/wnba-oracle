@@ -2210,6 +2210,58 @@
       "homeScore": 72,
       "awayScore": 63,
       "gradedAt": "2026-07-20T10:00:02.268615+00:00"
+    },
+    {
+      "date": "2026-07-20",
+      "gameId": "wnba-2026-07-20-LV-TOR",
+      "away": "LV",
+      "home": "TOR",
+      "pickedTeam": "LV",
+      "modelProb": 0.5956,
+      "actualWinner": "LV",
+      "correct": true,
+      "homeScore": 83,
+      "awayScore": 109,
+      "gradedAt": "2026-07-21T09:47:23.504125+00:00"
+    },
+    {
+      "date": "2026-07-20",
+      "gameId": "wnba-2026-07-20-NY-DAL",
+      "away": "NY",
+      "home": "DAL",
+      "pickedTeam": "NY",
+      "modelProb": 0.6279,
+      "actualWinner": "NY",
+      "correct": true,
+      "homeScore": 98,
+      "awayScore": 99,
+      "gradedAt": "2026-07-21T09:47:23.504141+00:00"
+    },
+    {
+      "date": "2026-07-20",
+      "gameId": "wnba-2026-07-20-WSH-GS",
+      "away": "WSH",
+      "home": "GS",
+      "pickedTeam": "GS",
+      "modelProb": 0.617,
+      "actualWinner": "WSH",
+      "correct": false,
+      "homeScore": 82,
+      "awayScore": 90,
+      "gradedAt": "2026-07-21T09:47:23.504145+00:00"
+    },
+    {
+      "date": "2026-07-20",
+      "gameId": "wnba-2026-07-20-MIN-SEA",
+      "away": "MIN",
+      "home": "SEA",
+      "pickedTeam": "MIN",
+      "modelProb": 0.5877,
+      "actualWinner": "MIN",
+      "correct": true,
+      "homeScore": 102,
+      "awayScore": 105,
+      "gradedAt": "2026-07-21T09:47:23.504324+00:00"
     }
   ]
 }
