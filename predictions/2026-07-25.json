@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-07-25",
+  "generatedAt": "2026-07-25T11:27:52Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-07-25-SPO-COOP",
+      "home": "COOP",
+      "away": "SPO",
+      "pickedTeam": "COOP",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
