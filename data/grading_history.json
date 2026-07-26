@@ -2327,6 +2327,19 @@
       "homeScore": 97,
       "awayScore": 101,
       "gradedAt": "2026-07-23T09:45:51.851337+00:00"
+    },
+    {
+      "date": "2026-07-25",
+      "gameId": "wnba-2026-07-25-SPO-COOP",
+      "away": "SPO",
+      "home": "COOP",
+      "pickedTeam": "COOP",
+      "modelProb": 0.617,
+      "actualWinner": "SPO",
+      "correct": false,
+      "homeScore": 122,
+      "awayScore": 129,
+      "gradedAt": "2026-07-26T09:38:54.133570+00:00"
     }
   ]
 }
