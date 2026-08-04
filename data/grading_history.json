@@ -2548,6 +2548,32 @@
       "homeScore": 96,
       "awayScore": 79,
       "gradedAt": "2026-08-03T10:14:51.709776+00:00"
+    },
+    {
+      "date": "2026-08-03",
+      "gameId": "wnba-2026-08-03-SEA-NY",
+      "away": "SEA",
+      "home": "NY",
+      "pickedTeam": "NY",
+      "modelProb": 0.617,
+      "actualWinner": "NY",
+      "correct": true,
+      "homeScore": 95,
+      "awayScore": 83,
+      "gradedAt": "2026-08-04T09:51:47.934145+00:00"
+    },
+    {
+      "date": "2026-08-03",
+      "gameId": "wnba-2026-08-03-PHX-CHI",
+      "away": "PHX",
+      "home": "CHI",
+      "pickedTeam": "PHX",
+      "modelProb": 0.6029,
+      "actualWinner": "PHX",
+      "correct": true,
+      "homeScore": 101,
+      "awayScore": 106,
+      "gradedAt": "2026-08-04T09:51:47.934168+00:00"
     }
   ]
 }
