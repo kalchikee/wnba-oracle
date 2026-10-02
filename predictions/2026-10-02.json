@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-10-02",
+  "generatedAt": "2026-10-02T11:12:01Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-10-02-DAL-GS",
+      "home": "GS",
+      "away": "DAL",
+      "pickedTeam": "GS",
+      "pickedSide": "home",
+      "modelProb": 0.6596,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "medium",
+      "extra": {
+        "homeProb": 0.6596,
+        "awayProb": 0.3404
+      }
+    }
+  ]
+}
