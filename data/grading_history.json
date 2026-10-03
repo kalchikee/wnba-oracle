@@ -2587,6 +2587,19 @@
       "homeScore": 92,
       "awayScore": 81,
       "gradedAt": "2026-08-05T09:51:07.803377+00:00"
+    },
+    {
+      "date": "2026-10-02",
+      "gameId": "wnba-2026-10-02-DAL-GS",
+      "away": "DAL",
+      "home": "GS",
+      "pickedTeam": "GS",
+      "modelProb": 0.6596,
+      "actualWinner": "GS",
+      "correct": true,
+      "homeScore": 77,
+      "awayScore": 73,
+      "gradedAt": "2026-10-03T09:03:05.058840+00:00"
     }
   ]
 }
