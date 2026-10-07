@@ -1,0 +1,37 @@
+{
+  "sport": "WNBA",
+  "date": "2026-10-07",
+  "generatedAt": "2026-10-07T11:11:34Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-10-07-NY-ATL",
+      "home": "ATL",
+      "away": "NY",
+      "pickedTeam": "ATL",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    },
+    {
+      "gameId": "wnba-2026-10-07-LV-GS",
+      "home": "GS",
+      "away": "LV",
+      "pickedTeam": "LV",
+      "pickedSide": "away",
+      "modelProb": 0.5956,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.4044,
+        "awayProb": 0.5956
+      }
+    }
+  ]
+}
