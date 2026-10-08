@@ -2626,6 +2626,32 @@
       "homeScore": 71,
       "awayScore": 60,
       "gradedAt": "2026-10-05T09:08:30.064632+00:00"
+    },
+    {
+      "date": "2026-10-07",
+      "gameId": "wnba-2026-10-07-NY-ATL",
+      "away": "NY",
+      "home": "ATL",
+      "pickedTeam": "ATL",
+      "modelProb": 0.617,
+      "actualWinner": "ATL",
+      "correct": true,
+      "homeScore": 101,
+      "awayScore": 98,
+      "gradedAt": "2026-10-08T09:05:11.005162+00:00"
+    },
+    {
+      "date": "2026-10-07",
+      "gameId": "wnba-2026-10-07-LV-GS",
+      "away": "LV",
+      "home": "GS",
+      "pickedTeam": "LV",
+      "modelProb": 0.5956,
+      "actualWinner": "GS",
+      "correct": false,
+      "homeScore": 83,
+      "awayScore": 81,
+      "gradedAt": "2026-10-08T09:05:11.005181+00:00"
     }
   ]
 }
