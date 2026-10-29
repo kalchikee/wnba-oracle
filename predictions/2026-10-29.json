@@ -1,0 +1,22 @@
+{
+  "sport": "WNBA",
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T11:08:29Z",
+  "picks": [
+    {
+      "gameId": "wnba-2026-10-29-GS-ATL",
+      "home": "ATL",
+      "away": "GS",
+      "pickedTeam": "ATL",
+      "pickedSide": "home",
+      "modelProb": 0.617,
+      "vegasProb": null,
+      "edge": null,
+      "confidenceTier": "low",
+      "extra": {
+        "homeProb": 0.617,
+        "awayProb": 0.383
+      }
+    }
+  ]
+}
