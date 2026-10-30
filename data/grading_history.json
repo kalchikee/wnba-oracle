@@ -2704,6 +2704,19 @@
       "homeScore": 62,
       "awayScore": 67,
       "gradedAt": "2026-10-25T09:02:05.601584+00:00"
+    },
+    {
+      "date": "2026-10-29",
+      "gameId": "wnba-2026-10-29-GS-ATL",
+      "away": "GS",
+      "home": "ATL",
+      "pickedTeam": "ATL",
+      "modelProb": 0.617,
+      "actualWinner": "ATL",
+      "correct": true,
+      "homeScore": 80,
+      "awayScore": 69,
+      "gradedAt": "2026-10-30T09:01:36.392514+00:00"
     }
   ]
 }
